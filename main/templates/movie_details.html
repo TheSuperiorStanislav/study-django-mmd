@@ -10,5 +10,5 @@
     <li>{{ review.review }} by {{ review.user_name }}</li>
     {% endfor %}
 </ul>
-<a href="{% url 'new-review' movie_pk=object.pk %}">Submit New Review</a>
+<a href="{% url 'new-review' object.pk %}">Submit New Review</a>
 {% endblock %}
