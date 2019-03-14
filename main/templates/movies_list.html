@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
+{% load i18n %}
 
 {% block content %}
-<h2>Movies List</h2>
+<h2>{% trans 'Movies List' %}</h2>
 
 <ul>
     {% for movie in object_list %}
-    <li><a href="{% url 'movie-details' pk=movie.pk %}">{{ movie.title }}</a> | {{ movie.stars }} Stars</li>
+    <li><a href="{% url 'movie-details' pk=movie.pk %}">{{ movie.title }}</a> | {{ movie.stars }} {% trans 'Stars' %}</li>
     {% endfor %}
 </ul>
 {% endblock %}
